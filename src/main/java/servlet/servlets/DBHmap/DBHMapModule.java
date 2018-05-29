@@ -14,7 +14,7 @@ public class DBHMapModule extends AbstractModule {
         bind(DBHMapReader.class).to(DBHMapReaderImpl.class);
         bind(String.class)
                 .annotatedWith(Names.named("DBHMapInfoFileName"))
-                .toInstance("/Users/alleninwood/Desktop/GuiceServlet/src/main/webapp/resources/DBH 2 floor.txt");
+                .toInstance("/Users/alleninwood/Desktop/DBHIndoorRouter/src/main/webapp/resources/DBH 2 floor.txt");
     }
 
     @Provides @Named("DBHMap")

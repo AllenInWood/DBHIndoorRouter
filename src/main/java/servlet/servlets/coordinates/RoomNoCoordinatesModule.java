@@ -14,7 +14,7 @@ public class RoomNoCoordinatesModule extends AbstractModule {
         bind(CoordinateInfoReader.class).to(CoordinateInfoReaderImpl.class);
         bind(String.class)
                 .annotatedWith(Names.named("RoomNoCoordinateInfoFileName"))
-                .toInstance("/Users/alleninwood/Desktop/GuiceServlet/src/main/webapp/resources/coordinates.txt");
+                .toInstance("/Users/alleninwood/Desktop/DBHIndoorRouter/src/main/webapp/resources/coordinates.txt");
     }
 
     @Provides
