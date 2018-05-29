@@ -11,6 +11,11 @@ Calculate the nearest route based on DBH map and start point and destination roo
 ### coordinates
 Read from "coordinates.txt" to get roomNo->coordinate map (TYPE : Map<String, Coordinate>) for transferring.
 
+# Test
+RoomNoCoordinatesReaderTest.java : test coordinates module
+DBHMapReaderTest.java : test DBHmap module
+RouterServiceTest.java : test routing module
+
 # TODO:
 1. Migrate two file ("DBH 2 floor.txt" and "coordinates.txt") data into database (may try MongoDB this time).
 2. Front-end optimization.
