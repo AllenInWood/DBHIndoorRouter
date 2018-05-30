@@ -8,18 +8,15 @@ import java.util.Map;
 
 public class RoomNoCoordinatesTransferServiceImpl implements RoomNoCoordinatesTransferService{
 
-    private List<String> roomNoPaths;
     private Map<String, Coordinate> roomNoCoordinateMap;
 
     @Inject
     public RoomNoCoordinatesTransferServiceImpl(
-            @Named("RoomNoPaths") List<String> roomNoPaths,
             @Named("CoordinateInfo") Map<String, Coordinate> roomNoCoordinateMap) {
-        this.roomNoPaths = roomNoPaths;
         this.roomNoCoordinateMap = roomNoCoordinateMap;
     }
 
-    public List<Coordinate> transfer() {
+    public List<Coordinate> transfer(List<String> roomNoPaths) {
         List<Coordinate> coordinateList = new ArrayList<Coordinate>();
         for (String roomNo : roomNoPaths) {
             if (roomNoCoordinateMap.containsKey(roomNo)) {
