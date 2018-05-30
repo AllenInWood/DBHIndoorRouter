@@ -41,7 +41,7 @@ public class RouteServlet extends HttpServlet {
 			LocalizerUtil.setCurLocation(startRoomNo);
 			LocalizerUtil.setDestination(destinationRoomNo);
 			List<Coordinate> coordinatesPaths = roomNoCoordinatesTransferService.transfer();
-			String json = new Gson().toJson(coordinatesPaths);
+			String json = new Gson().toJson(ServerResponse.createBySuccess(coordinatesPaths));
 			response.setContentType("application/json");
 			response.setCharacterEncoding("UTF-8");
 			response.getWriter().write(json);
