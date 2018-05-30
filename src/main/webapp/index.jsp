@@ -13,7 +13,7 @@
 <body>
 	<div class="container">
 		<div class="row">
-			<canvas  style="background-image: url(img/mapDemo.jpg);" id="myCanvas" width=1050 height=950></canvas>
+			<canvas  style="background-image: url(img/mapDemo2.jpg);" id="myCanvas" width=1050 height=950></canvas>
 		</div>
 	</div>
 </body>
