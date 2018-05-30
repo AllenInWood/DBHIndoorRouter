@@ -6,12 +6,12 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
-public class RoomNoCoordinatesTransferServiceImpl implements RoomNoCoordinatesTransferService{
+public class TransferServiceImpl implements TransferService {
 
     private Map<String, Coordinate> roomNoCoordinateMap;
 
     @Inject
-    public RoomNoCoordinatesTransferServiceImpl(
+    public TransferServiceImpl(
             @Named("CoordinateInfo") Map<String, Coordinate> roomNoCoordinateMap) {
         this.roomNoCoordinateMap = roomNoCoordinateMap;
     }

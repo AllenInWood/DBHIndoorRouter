@@ -8,7 +8,7 @@ public class MainModule extends AbstractModule {
     protected void configure() {
         install(new RoomNoCoordinatesModule());
         install(new RouterModule());
-        bind(RoomNoCoordinatesTransferService.class)
-                .to(RoomNoCoordinatesTransferServiceImpl.class);
+        bind(TransferService.class)
+                .to(TransferServiceImpl.class);
     }
 }
