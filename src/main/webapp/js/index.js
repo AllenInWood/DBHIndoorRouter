@@ -8,7 +8,7 @@ $(document).ready(function () {
         success: function (responseJson) {
             if (responseJson.status == "0") {
                 var data = responseJson.data;
-                var c = document.getElementById("myCanvas");
+                var c = document.getElementById("myCanvas-2");
                 var ctx = c.getContext("2d");
                 ctx.strokeStyle = "rgb(255,0,0)"
                 ctx.lineWidth = 4;

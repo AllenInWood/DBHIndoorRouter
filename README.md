@@ -22,7 +22,5 @@ DBHMapReaderTest.java : test DBHmap module
 RouterServiceTest.java : test routing module
 
 # TODO:
-1. Move FileName into a .properties file.
-2. Migrate two file ("DBH 2 floor.txt" and "coordinates.txt") data into database (may try MongoDB this time).
-3. Front-end optimization.
-4. increase Room Entity in background img.
+1. Migrate two file ("DBH 2 floor.txt" and "coordinates.txt") data into database (may try MongoDB this time).
+2. increase Room Entity in background img.
