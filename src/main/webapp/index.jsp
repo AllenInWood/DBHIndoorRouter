@@ -34,7 +34,8 @@
 	</defs>
 </svg>
 <div class="container">
-	<div class="main">
+	<div class="row">
+		<div class="main">
 		<header class="codrops-header">
 			<h1>DBH indoor routing</h1>
 		</header>
@@ -65,7 +66,8 @@
 			<button class="boxbutton mallnav__button--down" aria-label="Go down"><svg class="icon icon--angle-down"><use xlink:href="#icon-angle-down"></use></svg></button>
 		</nav>
 	</div>
-	<!-- /main -->
+	</div>
+		<!-- /main -->
 </div>
 
 <%--demo--%>

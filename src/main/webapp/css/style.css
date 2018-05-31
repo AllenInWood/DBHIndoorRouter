@@ -125,17 +125,17 @@ button:focus {
 .levels {
 	position: absolute;
 	top: 40%;
-	left: 45%;
+	left: 35%;
 }
 
 .surroundings {
 	position: absolute;
 	top: 35%;
-	left: 50%;
+	left: 40%;
 }
 
 .surroundings {
-	width: 220vmin;
+	width: 230vmin;
 	/* double of mall map */
 	height: 150vmin;
 	margin: -64vmin 0 0 -96vmin;
@@ -236,18 +236,18 @@ button:focus {
 }
 
 .level--2 {
-	-webkit-transform: translateZ(10vmin);
-	transform: translateZ(10vmin);
+	-webkit-transform: translateZ(12vmin);
+	transform: translateZ(12vmin);
 }
 
 .level--3 {
-	-webkit-transform: translateZ(20vmin);
-	transform: translateZ(20vmin);
+	-webkit-transform: translateZ(24vmin);
+	transform: translateZ(24vmin);
 }
 
 .level--4 {
-	-webkit-transform: translateZ(30vmin);
-	transform: translateZ(30vmin);
+	-webkit-transform: translateZ(36vmin);
+	transform: translateZ(36vmin);
 }
 
 
