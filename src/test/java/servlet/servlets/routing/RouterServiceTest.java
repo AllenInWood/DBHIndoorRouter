@@ -4,13 +4,12 @@ import org.junit.Before;
 import org.junit.Test;
 
 import javax.inject.Inject;
-import javax.inject.Named;
 import java.util.List;
 
 public class RouterServiceTest {
 
-    @Inject @Named("RoomNoPaths")
-    private List<String> paths;
+    @Inject
+    private RouterCalculator routerCalculator;
 
     @Before
     public void setUp() {
@@ -20,6 +19,7 @@ public class RouterServiceTest {
 
     @Test
     public void testRouting() {
+        List<String> paths = routerCalculator.getRoutingList("0", "2222");
         for (String path : paths) {
             System.out.println(path);
         }

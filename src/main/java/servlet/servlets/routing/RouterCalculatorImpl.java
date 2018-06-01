@@ -5,20 +5,14 @@ import java.util.*;
 
 public class RouterCalculatorImpl implements RouterCalculator{
 
-    private String start;
-    private String destination;
     private Map<String, Map<String, Double>> floor;
 
     @Inject
-    public RouterCalculatorImpl(@Named("DBHMap") Map<String, Map<String, Double>> DBHMap,
-                                @Start String start,
-                                @Destination String destination) {
+    public RouterCalculatorImpl(@Named("DBHMap") Map<String, Map<String, Double>> DBHMap) {
         this.floor = DBHMap;
-        this.start = start;
-        this.destination = destination;
     }
 
-    public List<String> getRoutingList() {
+    public List<String> getRoutingList(String start, String destination) {
         Map<String, Double> distance = new HashMap<String, Double>();
         Map<String, String> lastNode = new HashMap<String, String>();
         LinkedList<String> res = new LinkedList<String>();

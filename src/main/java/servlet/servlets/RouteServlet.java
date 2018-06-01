@@ -15,7 +15,7 @@ import servlet.servlets.common.ResponseCode;
 import servlet.servlets.common.ServerResponse;
 import servlet.servlets.common.VerifyUtil;
 import servlet.servlets.coordinates.Coordinate;
-import servlet.servlets.localize.LocalizerUtil;
+import servlet.servlets.routing.RouterCalculator;
 
 @Singleton
 public class RouteServlet extends HttpServlet {
@@ -23,8 +23,8 @@ public class RouteServlet extends HttpServlet {
 	@Inject
 	private TransferService transferService;
 
-	@Inject @Named("RoomNoPaths")
-	private List<String> roomNoPaths;
+	@Inject
+	private RouterCalculator routerCalculator;
 
 	@Override
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
@@ -35,6 +35,7 @@ public class RouteServlet extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		String startRoomNo = request.getParameter("startNo");
 		String destinationRoomNo = request.getParameter("destinationNo");
+		System.out.println("!!!!!!!" + destinationRoomNo);
 		if (!VerifyUtil.verify(startRoomNo, destinationRoomNo)) {
 			String json = new Gson().toJson(
 					ServerResponse.createByErrorCodeMessage(
@@ -44,8 +45,7 @@ public class RouteServlet extends HttpServlet {
 			response.setCharacterEncoding("UTF-8");
 			response.getWriter().write(json);
 		} else {
-			LocalizerUtil.setCurLocation(startRoomNo);
-			LocalizerUtil.setDestination(destinationRoomNo);
+			List<String> roomNoPaths = routerCalculator.getRoutingList(startRoomNo, destinationRoomNo);
 			List<Coordinate> coordinatesPaths
 					= transferService.transfer(roomNoPaths);
 			String json = new Gson().toJson(

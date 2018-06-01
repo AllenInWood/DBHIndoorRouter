@@ -3,7 +3,7 @@ $(document).ready(function () {
         type: "GET",
         url: "route",
         // get data from tippers interface further
-        data: {"startNo": "0", "destinationNo": "2222"},
+        data: {"startNo": "0", "destinationNo": "2099"},
         dataType: "json",
         success: function (responseJson) {
             if (responseJson.status == "0") {

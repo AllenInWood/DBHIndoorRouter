@@ -4,5 +4,5 @@ import java.util.List;
 
 public interface RouterCalculator {
 
-    List<String> getRoutingList();
+    List<String> getRoutingList(String start, String destination);
 }

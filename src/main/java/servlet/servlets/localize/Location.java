@@ -2,24 +2,13 @@ package servlet.servlets.localize;
 
 public class Location {
 
-    private String floor;
-
     private String roomNo;
 
-    public Location() {
-    }
+    private String desc;
 
-    public Location(String floor, String roomNo) {
-        this.floor = floor;
+    public Location(String roomNo, String desc) {
         this.roomNo = roomNo;
-    }
-
-    public String getFloor() {
-        return floor;
-    }
-
-    public void setFloor(String floor) {
-        this.floor = floor;
+        this.desc = desc;
     }
 
     public String getRoomNo() {
@@ -28,5 +17,13 @@ public class Location {
 
     public void setRoomNo(String roomNo) {
         this.roomNo = roomNo;
+    }
+
+    public String getDesc() {
+        return desc;
+    }
+
+    public void setDesc(String desc) {
+        this.desc = desc;
     }
 }
