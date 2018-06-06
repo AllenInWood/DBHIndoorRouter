@@ -24,7 +24,8 @@ public class RoomNoCoordinatesReaderTest {
         for (String roomNo : roomNoCoordinateMap.keySet()) {
             System.out.println(roomNo + " : ("
                     + roomNoCoordinateMap.get(roomNo).getxAxis() + " , "
-                    + roomNoCoordinateMap.get(roomNo).getyAxis() + ")");
+                    + roomNoCoordinateMap.get(roomNo).getyAxis() + "), Level : "
+                    + roomNoCoordinateMap.get(roomNo).getLevel());
         }
     }
 }

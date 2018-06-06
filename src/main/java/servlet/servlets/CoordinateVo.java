@@ -1,17 +1,14 @@
-package servlet.servlets.coordinates;
+package servlet.servlets;
 
-public class Coordinate {
+public class CoordinateVo {
 
     private String xAxis;
 
     private String yAxis;
 
-    private String level;
-
-    public Coordinate(String xAxis, String yAxis, String level) {
+    public CoordinateVo(String xAxis, String yAxis) {
         this.xAxis = xAxis;
         this.yAxis = yAxis;
-        this.level = level;
     }
 
     public String getxAxis() {
@@ -28,13 +25,5 @@ public class Coordinate {
 
     public void setyAxis(String yAxis) {
         this.yAxis = yAxis;
-    }
-
-    public String getLevel() {
-        return level;
-    }
-
-    public void setLevel(String level) {
-        this.level = level;
     }
 }

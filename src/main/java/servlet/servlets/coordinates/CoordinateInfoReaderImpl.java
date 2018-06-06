@@ -24,7 +24,7 @@ public class CoordinateInfoReaderImpl implements CoordinateInfoReader{
             String line;
             while ((line = reader.readLine()) != null) {
                 String[] array = line.split(",");
-                Coordinate coordinate = new Coordinate(array[1], array[2]);
+                Coordinate coordinate = new Coordinate(array[1], array[2], array[3]);
                 coordinateMap.put(array[0], coordinate);
             }
             reader.close();

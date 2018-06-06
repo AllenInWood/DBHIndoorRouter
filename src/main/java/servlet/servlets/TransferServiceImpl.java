@@ -3,6 +3,7 @@ import servlet.servlets.coordinates.Coordinate;
 import javax.inject.Inject;
 import javax.inject.Named;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
@@ -16,16 +17,23 @@ public class TransferServiceImpl implements TransferService {
         this.roomNoCoordinateMap = roomNoCoordinateMap;
     }
 
-    public List<Coordinate> transfer(List<String> roomNoPaths) {
-        List<Coordinate> coordinateList = new ArrayList<Coordinate>();
+    public Map<String, List<CoordinateVo>> transfer(List<String> roomNoPaths) {
+        Map<String, List<CoordinateVo>> coordinateMap = new HashMap<String, List<CoordinateVo>>();
         for (String roomNo : roomNoPaths) {
             if (roomNoCoordinateMap.containsKey(roomNo)) {
-                Coordinate curCoordinate = new Coordinate(
-                        roomNoCoordinateMap.get(roomNo).getxAxis(),
-                        roomNoCoordinateMap.get(roomNo).getyAxis());
-                coordinateList.add(curCoordinate);
+                if (!coordinateMap.containsKey(
+                        roomNoCoordinateMap.get(roomNo)
+                                .getLevel())) {
+                    coordinateMap.put(roomNoCoordinateMap.get(roomNo)
+                            .getLevel(), new ArrayList<CoordinateVo>());
+                } else {
+                    coordinateMap.get(roomNoCoordinateMap.get(roomNo).getLevel())
+                            .add(new CoordinateVo(
+                                    roomNoCoordinateMap.get(roomNo).getxAxis(),
+                            roomNoCoordinateMap.get(roomNo).getyAxis()));
+                }
             }
         }
-        return coordinateList;
+        return coordinateMap;
     }
 }

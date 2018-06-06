@@ -2,8 +2,8 @@ package servlet.servlets;
 
 import java.io.IOException;
 import java.util.List;
+import java.util.Map;
 import javax.inject.Inject;
-import javax.inject.Named;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -14,7 +14,6 @@ import com.google.inject.Singleton;
 import servlet.servlets.common.ResponseCode;
 import servlet.servlets.common.ServerResponse;
 import servlet.servlets.common.VerifyUtil;
-import servlet.servlets.coordinates.Coordinate;
 import servlet.servlets.routing.RouterCalculator;
 
 @Singleton
@@ -35,7 +34,6 @@ public class RouteServlet extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		String startRoomNo = request.getParameter("startNo");
 		String destinationRoomNo = request.getParameter("destinationNo");
-		System.out.println("!!!!!!!" + destinationRoomNo);
 		if (!VerifyUtil.verify(startRoomNo, destinationRoomNo)) {
 			String json = new Gson().toJson(
 					ServerResponse.createByErrorCodeMessage(
@@ -46,10 +44,10 @@ public class RouteServlet extends HttpServlet {
 			response.getWriter().write(json);
 		} else {
 			List<String> roomNoPaths = routerCalculator.getRoutingList(startRoomNo, destinationRoomNo);
-			List<Coordinate> coordinatesPaths
+			Map<String, List<CoordinateVo>> coordinateVoMap
 					= transferService.transfer(roomNoPaths);
 			String json = new Gson().toJson(
-					ServerResponse.createBySuccess(coordinatesPaths));
+					ServerResponse.createBySuccess(coordinateVoMap));
 			response.setContentType("application/json");
 			response.setCharacterEncoding("UTF-8");
 			response.getWriter().write(json);
