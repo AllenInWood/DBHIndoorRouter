@@ -13,8 +13,9 @@ public class DBHMapModule extends AbstractModule {
     protected void configure() {
         bind(DBHMapReader.class).to(DBHMapReaderImpl.class);
         bind(String.class)
-                .annotatedWith(Names.named("DBHMapInfoFileName"))
-                .toInstance("/Users/alleninwood/Desktop/DBHIndoorRouter/src/main/webapp/resources/NewDBHfloors.txt");
+                .annotatedWith(Names.named("DbhDBName"))
+                .toInstance("jdbc:mysql://localhost:3306/cs237?autoReconnect=true&useSSL=false");
+//                .toInstance("/Users/alleninwood/Desktop/DBHIndoorRouter/src/main/webapp/resources/NewDBHfloors.txt");
 //                .toInstance("/Users/alleninwood/Desktop/DBHIndoorRouter/src/main/webapp/resources/DBH 2 floor.txt");
     }
 
