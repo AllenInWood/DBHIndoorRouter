@@ -4,6 +4,10 @@ Basically route the indoor path and later more functions involve.
 # Before Running:
 Create a database named "cs237", and populate data from 'cs237.sql' in 'src/main/webapp/resources/'
 
+### beacon
+return "beacon_placement.json" String service
+### common
+Common utilization
 ### DBHmap
 Read from "DBH 2 floor.txt" to retrieve the neighbor-cost map (TYPE : Map<String, Map<String, Double>>) for routing.
 ### localize
@@ -21,4 +25,5 @@ RouterServiceTest.java : test routing module
 # TODO:
 1. more upper level service like find nearest restroom.
 2. create roomNo-description pair and store in DB.
-3. show start and destination in front-end.
+3. show start and destination icon in front-end.
+4. add input destination form.
