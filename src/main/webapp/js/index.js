@@ -1,5 +1,5 @@
 $(document).ready(function () {
-    beacon_placement = "https://api.myjson.com/bins/bzf6a";
+    beacon_placement = "http://localhost:8080/beacon";
     var src;
     var beaconID = [];
     $.getJSON("http://sensoria.ics.uci.edu:8059/sensor/get?sensor_type_id=4", function(data) {
@@ -43,7 +43,7 @@ $(document).ready(function () {
                     type: "GET",
                     url: "route",
                     // get data from tippers interface further
-                    data: {"startNo": src, "destinationNo": "3222"},
+                    data: {"startNo": src, "destinationNo": "3059"},
                     dataType: "json",
                     success: function (responseJson) {
                         if (responseJson.status == "0") {

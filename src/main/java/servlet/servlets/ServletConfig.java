@@ -12,6 +12,7 @@ public class ServletConfig extends GuiceServletContextListener {
             @Override
             protected void configureServlets() {
                 serve("/route").with(RouteServlet.class);
+                serve("/beacon").with(BeaconInfoServlet.class);
             }},
                 new MainModule());
     }

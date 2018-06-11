@@ -1,0 +1,503 @@
+[
+
+{
+	"00000000-0000-0000-0000-000000001000":
+		[{
+			"major" : "1",
+			"minor" : "1",
+			"room" : "Main Lounge"
+		},
+		{
+			"major" : "2",
+			"minor" : "1",
+			"room" : "1427"
+		},
+		{
+			"major" : "3",
+			"minor" : "1",
+			"room" : "1500"
+		}]
+},
+
+{
+	"00000000-0000-0000-0000-000000002000":
+		[{
+			"major" : "1",
+			"minor" : "1",
+			"room" : "2228"
+		},
+		{
+			"major" : "2",
+			"minor" : "1",
+			"room" : "2214"
+		},
+		{
+			"major" : "3",
+			"minor" : "1",
+			"room" : "2208"
+		},
+		{
+			"major" : "4",
+			"minor" : "1",
+			"room" : "2202"
+		},
+		{
+			"major" : "5",
+			"minor" : "1",
+			"room" : "2026"
+		},
+		{
+			"major" : "6",
+			"minor" : "1",
+			"room" : "2029"
+		},
+		{
+			"major" : "7",
+			"minor" : "1",
+			"room" : "2042"
+		},
+		{
+			"major" : "8",
+			"minor" : "1",
+			"room" : "2054"
+		},
+		{
+			"major" : "9",
+			"minor" : "1",
+			"room" : "2064"
+		},
+		{
+			"major" : "10",
+			"minor" : "1",
+			"room" : "2076"
+		},
+		{
+			"major" : "11",
+			"minor" : "1",
+			"room" : "2086"
+		},
+		{
+			"major" : "12",
+			"minor" : "1",
+			"room" : "12"
+		},
+		{
+			"major" : "13",
+			"minor" : "1",
+			"room" : ""
+		},
+		{
+			"major" : "14",
+			"minor" : "1",
+			"room" : ""
+		},
+				{
+			"major" : "15",
+			"minor" : "1",
+			"room" : "Kitchen"
+		},
+		{
+			"major" : "16",
+			"minor" : "1",
+			"room" : "2092"
+		},
+		{
+			"major" : "17",
+			"minor" : "1",
+			"room" : "2234"
+		},
+		{
+			"major" : "18",
+			"minor" : "1",
+			"room" : "2011"
+		},
+		{
+			"major" : "19",
+			"minor" : "1",
+			"room" : "2011"
+		},
+		{
+			"major" : "20",
+			"minor" : "1",
+			"room" : "Main Lounge"
+		}]
+},
+
+{
+	"00000000-0000-0000-0000-000000003000":
+		[{
+			"major" : "1",
+			"minor" : "1",
+			"room" : "3228"
+		},
+		{
+			"major" : "2",
+			"minor" : "1",
+			"room" : "3214"
+		},
+		{
+			"major" : "3",
+			"minor" : "1",
+			"room" : "3208"
+		},
+		{
+			"major" : "4",
+			"minor" : "1",
+			"room" : "3202"
+		},
+		{
+			"major" : "5",
+			"minor" : "1",
+			"room" : "3026"
+		},
+		{
+			"major" : "6",
+			"minor" : "1",
+			"room" : "3029"
+		},
+		{
+			"major" : "7",
+			"minor" : "1",
+			"room" : "3042"
+		},
+		{
+			"major" : "8",
+			"minor" : "1",
+			"room" : "3054"
+		},
+		{
+			"major" : "9",
+			"minor" : "1",
+			"room" : "3064"
+		},
+		{
+			"major" : "10",
+			"minor" : "1",
+			"room" : "3076"
+		},
+		{
+			"major" : "11",
+			"minor" : "1",
+			"room" : "3086"
+		},
+		{
+			"major" : "12",
+			"minor" : "1",
+			"room" : ""
+		},
+		{
+			"major" : "13",
+			"minor" : "1",
+			"room" : ""
+		},
+		{
+			"major" : "14",
+			"minor" : "1",
+			"room" : ""
+		},
+				{
+			"major" : "15",
+			"minor" : "1",
+			"room" : "Kitchen"
+		},
+		{
+			"major" : "16",
+			"minor" : "1",
+			"room" : "3092"
+		},
+		{
+			"major" : "17",
+			"minor" : "1",
+			"room" : "3234"
+		},
+		{
+			"major" : "18",
+			"minor" : "1",
+			"room" : "3011"
+		},
+		{
+			"major" : "19",
+			"minor" : "1",
+			"room" : "3011"
+		},
+		{
+			"major" : "20",
+			"minor" : "1",
+			"room" : "Main Lounge"
+		}]
+},
+
+{
+	"00000000-0000-0000-0000-000000004000":
+		[{
+			"major" : "1",
+			"minor" : "1",
+			"room" : "4228"
+		},
+		{
+			"major" : "2",
+			"minor" : "1",
+			"room" : "4214"
+		},
+		{
+			"major" : "3",
+			"minor" : "1",
+			"room" : "4208"
+		},
+		{
+			"major" : "4",
+			"minor" : "1",
+			"room" : "4202"
+		},
+		{
+			"major" : "5",
+			"minor" : "1",
+			"room" : "4026"
+		},
+		{
+			"major" : "6",
+			"minor" : "1",
+			"room" : "4029"
+		},
+		{
+			"major" : "7",
+			"minor" : "1",
+			"room" : "4042"
+		},
+		{
+			"major" : "8",
+			"minor" : "1",
+			"room" : "4054"
+		},
+		{
+			"major" : "9",
+			"minor" : "1",
+			"room" : "4064"
+		},
+		{
+			"major" : "10",
+			"minor" : "1",
+			"room" : "4076"
+		},
+		{
+			"major" : "11",
+			"minor" : "1",
+			"room" : "4086"
+		},
+		{
+			"major" : "12",
+			"minor" : "1",
+			"room" : ""
+		},
+		{
+			"major" : "13",
+			"minor" : "1",
+			"room" : ""
+		},
+		{
+			"major" : "14",
+			"minor" : "1",
+			"room" : ""
+		},
+				{
+			"major" : "15",
+			"minor" : "1",
+			"room" : "Kitchen"
+		},
+		{
+			"major" : "16",
+			"minor" : "1",
+			"room" : "4092"
+		},
+		{
+			"major" : "17",
+			"minor" : "1",
+			"room" : "4234"
+		},
+		{
+			"major" : "18",
+			"minor" : "1",
+			"room" : "4011"
+		},
+		{
+			"major" : "19",
+			"minor" : "1",
+			"room" : "4011"
+		},
+		{
+			"major" : "20",
+			"minor" : "1",
+			"room" : "Main Lounge"
+		}]
+},
+
+{
+	"00000000-0000-0000-0000-000000005000":
+		[{
+			"major" : "1",
+			"minor" : "1",
+			"room" : "5228"
+		},
+		{
+			"major" : "2",
+			"minor" : "1",
+			"room" : "5214"
+		},
+		{
+			"major" : "3",
+			"minor" : "1",
+			"room" : "5208"
+		},
+		{
+			"major" : "4",
+			"minor" : "1",
+			"room" : "5202"
+		},
+		{
+			"major" : "5",
+			"minor" : "1",
+			"room" : "5026"
+		},
+		{
+			"major" : "6",
+			"minor" : "1",
+			"room" : "5029"
+		},
+		{
+			"major" : "7",
+			"minor" : "1",
+			"room" : "5042"
+		},
+		{
+			"major" : "8",
+			"minor" : "1",
+			"room" : "5054"
+		},
+		{
+			"major" : "9",
+			"minor" : "1",
+			"room" : "5064"
+		},
+		{
+			"major" : "10",
+			"minor" : "1",
+			"room" : "5076"
+		},
+		{
+			"major" : "11",
+			"minor" : "1",
+			"room" : "5086"
+		},
+		{
+			"major" : "12",
+			"minor" : "1",
+			"room" : ""
+		},
+		{
+			"major" : "13",
+			"minor" : "1",
+			"room" : ""
+		},
+		{
+			"major" : "14",
+			"minor" : "1",
+			"room" : ""
+		},
+		{
+			"major" : "15",
+			"minor" : "1",
+			"room" : "Kitchen"
+		},
+		{
+			"major" : "16",
+			"minor" : "1",
+			"room" : "5092"
+		},
+		{
+			"major" : "17",
+			"minor" : "1",
+			"room" : "5234"
+		},
+		{
+			"major" : "18",
+			"minor" : "1",
+			"room" : "5011"
+		},
+		{
+			"major" : "19",
+			"minor" : "1",
+			"room" : "5011"
+		},
+		{
+			"major" : "20",
+			"minor" : "1",
+			"room" : "Main Lounge"
+		}]
+},
+
+{
+	"00000000-0000-0000-0000-000000006000":
+		[{
+			"major" : "1",
+			"minor" : "1",
+			"room" : "Main Lounge"
+		},
+		{
+			"major" : "2",
+			"minor" : "1",
+			"room" : "6024"
+		},
+		{
+			"major" : "3",
+			"minor" : "1",
+			"room" : "6028"
+		},
+		{
+			"major" : "4",
+			"minor" : "1",
+			"room" : "6042"
+		},
+		{
+			"major" : "5",
+			"minor" : "1",
+			"room" : "6052"
+		},
+		{
+			"major" : "6",
+			"minor" : "1",
+			"room" : "6011"
+		},
+		{
+			"major" : "7",
+			"minor" : "1",
+			"room" : "6011"
+		},
+		{
+			"major" : "8",
+			"minor" : "1",
+			"room" : "6062"
+		},
+		{
+			"major" : "9",
+			"minor" : "1",
+			"room" : "6092"
+		},
+		{
+			"major" : "10",
+			"minor" : "1",
+			"room" : "6072"
+		},
+		{
+			"major" : "11",
+			"minor" : "1",
+			"room" : "6131"
+		},
+		{
+			"major" : "12",
+			"minor" : "1",
+			"room" : "6097"
+		}]
+
+}
+
+]

@@ -13,10 +13,6 @@ public class RoomNoCoordinatesModule extends AbstractModule {
     @Override
     protected void configure() {
         bind(CoordinateInfoReader.class).to(CoordinateInfoReaderImpl.class);
-        bind(String.class)
-                .annotatedWith(Names.named("CoordinateDBName"))
-                .toInstance("jdbc:mysql://localhost:3306/cs237?autoReconnect=true&useSSL=false");
-//                .toInstance("/Users/alleninwood/Desktop/DBHIndoorRouter/src/main/webapp/resources/newCoordinates.txt");
     }
 
     @Provides

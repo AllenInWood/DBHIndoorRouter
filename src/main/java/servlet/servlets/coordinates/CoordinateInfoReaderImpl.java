@@ -1,30 +1,23 @@
 package servlet.servlets.coordinates;
-
-import javax.inject.Inject;
-import javax.inject.Named;
 import java.io.*;
 import java.sql.*;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Properties;
 
 public class CoordinateInfoReaderImpl implements CoordinateInfoReader{
-
-    private String databaseUrl;
-
-    @Inject
-    public CoordinateInfoReaderImpl(
-            @Named("CoordinateDBName")String databaseUrl) {
-        this.databaseUrl = databaseUrl;
-    }
 
     public Map<String, Coordinate> readRoomNoCoordinatesInfoFromSourceFile() {
         Map<String, Coordinate> coordinateMap = new HashMap<String, Coordinate>();
         try {
+            Properties prop = new Properties();
+            ClassLoader classLoader = getClass().getClassLoader();
+            prop.load(classLoader.getResourceAsStream("dbconfig.properties"));
             Class.forName("com.mysql.jdbc.Driver").newInstance();
             Connection connection = DriverManager.getConnection(
-                    databaseUrl,
-                    "root",
-                    "root");
+                    prop.getProperty("db.url"),
+                    prop.getProperty("db.username"),
+                    prop.getProperty("db.password"));
             PreparedStatement pstmt = connection
                     .prepareStatement("SELECT * FROM coordinates");
             ResultSet result = pstmt.executeQuery();
@@ -42,6 +35,8 @@ public class CoordinateInfoReaderImpl implements CoordinateInfoReader{
         } catch (ClassNotFoundException e) {
             e.printStackTrace();
         } catch (SQLException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
             e.printStackTrace();
         }
         return coordinateMap;

@@ -1,37 +1,28 @@
 package servlet.servlets.DBHmap;
-
-import javax.inject.Inject;
-import javax.inject.Named;
+import java.io.IOException;
 import java.sql.*;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Properties;
 
 public class DBHMapReaderImpl implements DBHMapReader{
-
-    private String databaseUrl;
-
-    @Inject
-    public DBHMapReaderImpl(
-            @Named("DbhDBName") String databaseUrl) {
-        this.databaseUrl = databaseUrl;
-    }
 
     public Map<String, Map<String, Double>> readDBHMapFromSourceFile() {
         Map<String, Map<String, Double>> floorMap
                 = new HashMap<String, Map<String, Double>>();
         try {
+            Properties prop = new Properties();
+            ClassLoader classLoader = getClass().getClassLoader();
+            prop.load(classLoader.getResourceAsStream("dbconfig.properties"));
             Class.forName("com.mysql.jdbc.Driver").newInstance();
             Connection connection = DriverManager.getConnection(
-                    databaseUrl,
-                    "root",
-                    "root");
+                    prop.getProperty("db.url"),
+                    prop.getProperty("db.username"),
+                    prop.getProperty("db.password"));
             PreparedStatement pstmt = connection
                     .prepareStatement("SELECT * FROM dbhMap");
             ResultSet result = pstmt.executeQuery();
             while (result.next()) {
-//                System.out.println(result.getString(2)
-//                        + " " + result.getString(3)
-//                        + " " + result.getDouble(4));
                 if (!floorMap.containsKey(result.getString(2))) {
                     floorMap.put(result.getString(2), new HashMap<String, Double>());
                 }
@@ -56,6 +47,8 @@ public class DBHMapReaderImpl implements DBHMapReader{
         } catch (ClassNotFoundException e) {
             e.printStackTrace();
         } catch (SQLException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
             e.printStackTrace();
         }
         return floorMap;
