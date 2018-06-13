@@ -39,6 +39,7 @@ public class FulltextServiceImpl implements FulltextService{
             while (result.next()) {
                 CompleteItem completeItem = new CompleteItem(result.getString(1), "" + index);
                 resultList.add(completeItem);
+                index++;
             }
             pstmt.close();
             connection.close();
