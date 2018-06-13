@@ -26,14 +26,26 @@ public class TransferServiceImpl implements TransferService {
                                 .getLevel())) {
                     coordinateMap.put(roomNoCoordinateMap.get(roomNo)
                             .getLevel(), new ArrayList<CoordinateVo>());
+                    coordinateMap.get(roomNoCoordinateMap.get(roomNo).getLevel())
+                            .add(new CoordinateVo(
+                                    roomNoCoordinateMap.get(roomNo).getxAxis(),
+                                    roomNoCoordinateMap.get(roomNo).getyAxis()
+                            ));
                 } else {
                     coordinateMap.get(roomNoCoordinateMap.get(roomNo).getLevel())
                             .add(new CoordinateVo(
                                     roomNoCoordinateMap.get(roomNo).getxAxis(),
-                            roomNoCoordinateMap.get(roomNo).getyAxis()));
+                                    roomNoCoordinateMap.get(roomNo).getyAxis()
+                            ));
                 }
             }
         }
+//        for (String key : coordinateMap.keySet()) {
+//            System.out.println("key : " + key + "=>");
+//            for (CoordinateVo coordinateVo : coordinateMap.get(key)) {
+//                System.out.print("x : " + coordinateVo.getxAxis() + ", y : " + coordinateVo.getyAxis());
+//            }
+//        }
         return coordinateMap;
     }
 }

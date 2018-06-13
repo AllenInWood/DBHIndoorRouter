@@ -1,6 +1,4 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-	pageEncoding="UTF-8" import="java.util.*"%>
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
@@ -8,11 +6,10 @@
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="css/normalize.css" />
 	<link rel="stylesheet" type="text/css" href="css/style.css" />
-	<script src="http://code.jquery.com/jquery-latest.min.js"></script>
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
-	<script src="js/modernizr-custom.js"></script>
+	<link rel="stylesheet" type="text/css" href="css/search.css" />
 </head>
 <body>
+
 <svg class="hidden">
 	<defs>
 		<symbol id="icon-stack" viewBox="0 0 32 32">
@@ -33,12 +30,17 @@
 		</symbol>
 	</defs>
 </svg>
+
 <div class="container">
 	<div class="row">
 		<div class="main">
-		<header class="codrops-header">
-			<h1>DBH indoor routing</h1>
-		</header>
+			<nav class="navbar navbar-light bg-light">
+				<a class="navbar-brand">Navbar</a>
+				<form class="form-inline">
+					<input class="form-control mr-sm-2" id="autocomplete" type="text" placeholder="Search" aria-label="Search">
+					<button class="btn btn-outline-success my-2 my-sm-0" id="fulltext" type="button">Search</button>
+				</form>
+			</nav>
 		<div class="mall">
 			<div class="surroundings">
 				<img class="surroundings__map" src="img/surroundings.svg" alt="Surroundings"/>
@@ -60,7 +62,7 @@
 			<!-- /levels -->
 		</div>
 		<!-- /mall -->
-		<nav class="mallnav mallnav--hidden">
+		<nav class="mallnav mallnav--hidden" style="top: 60px;">
 			<button class="boxbutton mallnav__button--up" aria-label="Go up"><svg class="icon icon--angle-down"><use xlink:href="#icon-angle-up"></use></svg></button>
 			<button class="boxbutton boxbutton--dark mallnav__button--all-levels" aria-label="Back to all levels"><svg class="icon icon--stack"><use xlink:href="#icon-stack"></use></svg></button>
 			<button class="boxbutton mallnav__button--down" aria-label="Go down"><svg class="icon icon--angle-down"><use xlink:href="#icon-angle-down"></use></svg></button>
@@ -68,6 +70,7 @@
 	</div>
 	</div>
 		<!-- /main -->
+
 </div>
 
 <%--demo--%>
@@ -76,6 +79,11 @@
 		<%--<canvas  style="background-image: url(img/newMapDemo.png);" id="myCanvas-2" width=1050 height=950></canvas>--%>
 	<%--</div>--%>
 <%--</div>--%>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.devbridge-autocomplete/1.4.6/jquery.autocomplete.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+<script src="js/modernizr-custom.js"></script>
 <script src="js/index.js"></script>
 <script src="js/classie.js"></script>
 <script src="js/main.js"></script>

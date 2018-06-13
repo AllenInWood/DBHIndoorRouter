@@ -19,7 +19,7 @@ public class RouterServiceTest {
 
     @Test
     public void testRouting() {
-        List<String> paths = routerCalculator.getRoutingList("0", "3222");
+        List<String> paths = routerCalculator.getRoutingList("2214", "3069");
         for (String path : paths) {
             System.out.println(path);
         }

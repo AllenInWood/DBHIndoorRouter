@@ -14,10 +14,14 @@ import com.google.inject.Singleton;
 import servlet.servlets.common.ResponseCode;
 import servlet.servlets.common.ServerResponse;
 import servlet.servlets.common.VerifyUtil;
+import servlet.servlets.fulltext.FulltextService;
 import servlet.servlets.routing.RouterCalculator;
 
 @Singleton
 public class RouteServlet extends HttpServlet {
+
+	@Inject
+	private FulltextService fulltextService;
 
 	@Inject
 	private TransferService transferService;
@@ -33,7 +37,8 @@ public class RouteServlet extends HttpServlet {
 	@Override
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		String startRoomNo = request.getParameter("startNo");
-		String destinationRoomNo = request.getParameter("destinationNo");
+		String destinationRoomNo = fulltextService.getDestinationID(
+				request.getParameter("destinationNo"));
 		if (!VerifyUtil.verify(startRoomNo, destinationRoomNo)) {
 			String json = new Gson().toJson(
 					ServerResponse.createByErrorCodeMessage(
@@ -53,7 +58,4 @@ public class RouteServlet extends HttpServlet {
 			response.getWriter().write(json);
 		}
 	}
-
-
-
 }

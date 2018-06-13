@@ -5,7 +5,7 @@
 		[{
 			"major" : "1",
 			"minor" : "1",
-			"room" : "Main Lounge"
+			"room" : "-1"
 		},
 		{
 			"major" : "2",
@@ -94,7 +94,7 @@
 				{
 			"major" : "15",
 			"minor" : "1",
-			"room" : "Kitchen"
+			"room" : "2008"
 		},
 		{
 			"major" : "16",
@@ -119,7 +119,7 @@
 		{
 			"major" : "20",
 			"minor" : "1",
-			"room" : "Main Lounge"
+			"room" : "100"
 		}]
 },
 
@@ -198,7 +198,7 @@
 				{
 			"major" : "15",
 			"minor" : "1",
-			"room" : "Kitchen"
+			"room" : "3008"
 		},
 		{
 			"major" : "16",
@@ -223,7 +223,7 @@
 		{
 			"major" : "20",
 			"minor" : "1",
-			"room" : "Main Lounge"
+			"room" : "145"
 		}]
 },
 

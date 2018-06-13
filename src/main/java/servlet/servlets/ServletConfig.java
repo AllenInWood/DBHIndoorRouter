@@ -1,5 +1,4 @@
 package servlet.servlets;
-
 import com.google.inject.Guice;
 import com.google.inject.Injector;
 import com.google.inject.servlet.GuiceServletContextListener;
@@ -13,6 +12,7 @@ public class ServletConfig extends GuiceServletContextListener {
             protected void configureServlets() {
                 serve("/route").with(RouteServlet.class);
                 serve("/beacon").with(BeaconInfoServlet.class);
+                serve("/targets").with(FulltextServlet.class);
             }},
                 new MainModule());
     }
