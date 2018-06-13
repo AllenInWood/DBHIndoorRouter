@@ -35,7 +35,7 @@
 	<div class="row">
 		<div class="main">
 			<nav class="navbar navbar-light bg-light">
-				<a class="navbar-brand">Navbar</a>
+				<a class="navbar-brand">DBH Indoor routing</a>
 				<form class="form-inline">
 					<input class="form-control mr-sm-2" id="autocomplete" type="text" placeholder="Search" aria-label="Search">
 					<button class="btn btn-outline-success my-2 my-sm-0" id="fulltext" type="button">Search</button>

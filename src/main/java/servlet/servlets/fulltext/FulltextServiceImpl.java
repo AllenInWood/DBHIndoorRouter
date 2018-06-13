@@ -65,7 +65,7 @@ public class FulltextServiceImpl implements FulltextService{
                     prop.getProperty("db.password"));
             PreparedStatement pstmt = connection.prepareStatement(
                     "SELECT id FROM rooms WHERE name = \"" + destination + "\"");
-//            System.out.println("sql : " + "SELECT id FROM rooms WHERE name = \"" + destination + "\"");
+            System.out.println("sql : " + "SELECT id FROM rooms WHERE name = \"" + destination + "\"");
             ResultSet result = pstmt.executeQuery();
 
             while (result.next()) {
