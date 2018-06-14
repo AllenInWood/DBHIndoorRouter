@@ -16,4 +16,13 @@ public class VerifyUtil {
         }
         return true;
     }
+
+    public static boolean isNumericString(String roomInput) {
+        for (int i = 0; i < roomInput.length(); i++) {
+            if (!Character.isDigit(roomInput.charAt(i))) {
+                return false;
+            }
+        }
+        return true;
+    }
 }

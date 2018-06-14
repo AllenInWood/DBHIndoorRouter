@@ -14,10 +14,10 @@ $(document).ready(function () {
         var now = d.toJSON().replace("T"," ").substring(0, 19);
         d.setTime(Date.now()-300*1000-timezone*60*1000);
         var past = d.toJSON().replace("T"," ").substring(0, 19);
-        // var url = "http://sensoria.ics.uci.edu:8059/observation/get?start_timestamp=" + past + "&end_timestamp=" + now;
-        // var recent = new Date(past.replace(/-/g,'/'));
-        var url = "http://sensoria.ics.uci.edu:8059/observation/get?start_timestamp=2018-06-01%2015:10:00&end_timestamp=2018-06-01%2015:20:00";
-        var recent = new Date("2018-06-01 15:10:00".replace(/-/g,'/'));
+        var url = "http://sensoria.ics.uci.edu:8059/observation/get?start_timestamp=" + past + "&end_timestamp=" + now;
+        var recent = new Date(past.replace(/-/g,'/'));
+        // var url = "http://sensoria.ics.uci.edu:8059/observation/get?start_timestamp=2018-06-01%2015:10:00&end_timestamp=2018-06-01%2015:20:00";
+        // var recent = new Date("2018-06-01 15:10:00".replace(/-/g,'/'));
         var recent_beaconID = "";
         $.getJSON(url, function(data) {
             $.each(data, function() {
@@ -39,14 +39,16 @@ $(document).ready(function () {
                 // src = "2222";
             }).done(function () {
                 console.log("startNoDone : " + src);
-                // routing(src);
                 $('#autocomplete').autocomplete({
                     minChars: 3,
                     lookup: function (query, done) {
+                        // console.log("start=" + src);
                         var result;
                         $.ajax({
                             "method": "GET",
-                            "url": "targets?inputRoom=" + escape(query),
+                            // "url": "targets",
+                            // "data": {"inputRoom": escape(query), "start": src},
+                            "url": "targets?inputRoom=" + escape(query) + "&start=" + src,
                             "success": function(responseJson) {
                                 result = {
                                     suggestions: responseJson.data
@@ -121,7 +123,8 @@ function routeIndoortrace(start, destination) {
             }
         },
         error: function (responseJson) {
-            alert("Failure : " + responseJson.status);
+            alert("Failure : " + responseJson.status
+                   + "\nInput format wrong!");
         }
     });
 }

@@ -14,7 +14,6 @@ import com.google.inject.Singleton;
 import servlet.servlets.common.ResponseCode;
 import servlet.servlets.common.ServerResponse;
 import servlet.servlets.common.VerifyUtil;
-import servlet.servlets.fulltext.FulltextService;
 import servlet.servlets.routing.RouterCalculator;
 
 @Singleton
@@ -37,8 +36,10 @@ public class RouteServlet extends HttpServlet {
 	@Override
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		String startRoomNo = request.getParameter("startNo");
-		String destinationRoomNo = fulltextService.getDestinationID(
-				request.getParameter("destinationNo"));
+		String destinationRoomNo = request.getParameter("destinationNo");
+		if (!VerifyUtil.isNumericString(destinationRoomNo)) {
+			destinationRoomNo = fulltextService.getDestinationID(destinationRoomNo);
+		}
 		if (!VerifyUtil.verify(startRoomNo, destinationRoomNo)) {
 			String json = new Gson().toJson(
 					ServerResponse.createByErrorCodeMessage(

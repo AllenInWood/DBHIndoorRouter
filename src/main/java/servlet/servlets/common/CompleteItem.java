@@ -6,9 +6,20 @@ public class CompleteItem {
 
     private String data;
 
+    private int cost;
+
+    public CompleteItem() {
+    }
+
     public CompleteItem(String value, String data) {
         this.value = value;
         this.data = data;
+    }
+
+    public CompleteItem(String value, String data, int cost) {
+        this.value = value;
+        this.data = data;
+        this.cost = cost;
     }
 
     public String getValue() {
@@ -25,5 +36,13 @@ public class CompleteItem {
 
     public void setData(String data) {
         this.data = data;
+    }
+
+    public int getCost() {
+        return cost;
+    }
+
+    public void setCost(int cost) {
+        this.cost = cost;
     }
 }
