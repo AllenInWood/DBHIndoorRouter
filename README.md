@@ -23,5 +23,4 @@ DBHMapReaderTest.java : test DBHmap module
 RouterServiceTest.java : test routing module
 
 # TODO:
-1. more upper level service like find nearest restroom.
-2. show start and destination icon in front-end.
+1. show start and destination icon in front-end.
