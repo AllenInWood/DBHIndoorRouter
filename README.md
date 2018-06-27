@@ -1,5 +1,8 @@
 # DBHIndoorRouter
-Basically route the indoor path and later more functions involve.
+Basically route indoor path from user's current location to some destination.
+Find the nearest exit from user's current location.
+Find the nearest restroom.
+...
 
 # Before Running:
 Create a database named "cs237", and populate data from 'cs237.sql' in 'src/main/webapp/resources/'
