@@ -6,16 +6,17 @@ Draw path.
 
 # Overview
 Routing from source to destination:
-<img src="/resources/routing_overview.png"  alt="routing_overview">
+<img src="src/main/webapp/resources/routing_overview.png"  alt="routing_overview">
 
 One layer detail:
-<img src="/resources/routing_oneLayer.png"  alt="routing_oneLayer">
+<img src="src/main/webapp/resources/routing_oneLayer.png"  alt="routing_oneLayer">
 
 We get user's statistical indoor location from beacon interface in [Tippers](http://tippersweb.ics.uci.edu/):
-<img src="/resources/Tippers_beacon_data.jpeg"  alt="Tippers_beacon_data">
+<img src="src/main/webapp/resources/Tippers_beacon_data.jpeg"  alt="Tippers_beacon_data">
 And obtain the latest one among them.
 
 # Before Running:
+Mark "src/main/webapp/resources" directory as "Resource Root"
 Create a database named "cs237", and populate data from 'cs237.sql' in 'src/main/webapp/resources/'
 
 ### beacon
