@@ -12,7 +12,7 @@ One layer detail:
 <img src="src/main/webapp/resources/routing_oneLayer.png"  alt="routing_oneLayer">
 
 We get user's statistical indoor location from beacon interface in [Tippers](http://tippersweb.ics.uci.edu/):
-<img src="src/main/webapp/resources/Tippers_beacon_data.jpeg"  alt="Tippers_beacon_data">
+<img src="src/main/webapp/resources/Tippers_beacon_data.jpg"  alt="Tippers_beacon_data">
 And obtain the latest one among them.
 
 # Before Running:
