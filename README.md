@@ -11,6 +11,8 @@ Routing from source to destination:
 One layer detail:
 <img src="src/main/webapp/resources/routing_oneLayer.png"  alt="routing_oneLayer">
 
+In addition, we implemented routing between different layer and its corresponding display.
+
 We get user's statistical indoor location from beacon interface in [Tippers](http://tippersweb.ics.uci.edu/):
 <img src="src/main/webapp/resources/Tippers_beacon_data.jpg"  alt="Tippers_beacon_data">
 And obtain the latest one among them.
