@@ -1,8 +1,8 @@
 # DBHIndoorRouter
-Indoor nearest routing in DBH Building, interacting with interfaces applied by Tippers 
-Find the nearest exit, nearest restroom from user's current location.
-Draw path.
-...
+1. Built responsive layout available both for PC and mobile.
+2. Suggested destinations among multi-floors in DBH Building sorted by distance by user's input prefix, displayed shortest routes within JQuery canvas using Dijkstra (also do research on A*). 
+Eg. Find the nearest exit, nearest restroom from user's current location.
+2. Implemented modularize IoT based services calculating routes through tracking interaction between user's phone and sensors(beacons/wifi routers) and obtaining data from interfaces applied by Tippers.
 
 # Overview
 ### Intro
