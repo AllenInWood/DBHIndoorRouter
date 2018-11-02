@@ -1,15 +1,15 @@
 # DBHIndoorRouter
-1. Built responsive layout available both for PC and mobile.
-2. Suggested destinations among multi-floors in DBH Building sorted by distance by user's input prefix, displayed shortest routes within JQuery canvas using Dijkstra (also do research on A*). 
+
+1. Suggested destinations among multi-floors in DBH Building sorted by distance based on user's input prefix.
+2. Displayed shortest routes from user's location to destination (eg. same floor, different floor through elevator etc.) within canvas using Dijkstra (also do research on A*). 
 Eg. Find the nearest exit, nearest restroom from user's current location.
-2. Implemented modularize IoT based services calculating routes through tracking interaction between user's phone and sensors(beacons/wifi routers) and obtaining data from interfaces applied by Tippers.
+3. Implemented modularize IoT based services calculating routes through tracking interaction between user's phone and sensors(beacons/wifi routers) installed in the building and obtaining data from interfaces applied by Tippers.
 
 # Overview
-### Intro
-1. Implemented front-end with jQuery, javascript, back-end services dependency injection with Guice in REST standard and database with MySQL for mapping information storage.
-2. Through interaction between user's phone and beacons installed in the building, we can obtain data through Tippers.
-3. Based on user's input, suggested destinations sorted by distance to user.
-4. Displayed routes from user's location to destination (eg. same floor, different floor through elevator etc.).
+### Tech
+1. Built responsive layout available both for PC and mobile with jQuery, javascript.
+2. Implemented back-end services with Guice for dependency injection.
+3. Database with MySQL for mapping information storage.
 
 ### Page Display
 Routing from source to destination:
